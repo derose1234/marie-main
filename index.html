@@ -49,6 +49,10 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 	
+	.auto-style8 {
+	text-align: center;
+}
+	
 	</style>
 	
 	
@@ -71,17 +75,17 @@
                  window.open("calendar.html", "newWindow", "width=500,height=700");
                  }</script>
                  
-<button onclick="openPopup3()">PDF Grid</button>
+<button onclick="openPopup3()">PDF Folder Grid</button>
 
  <script>
                  function openPopup3() {
-                 window.open("pdf test.html", "newWindow", "width=500,height=700");
+                 window.open("pdf_folder_grid.html", "newWindow", "width=500,height=700");
                  }</script>
                  
- <button onclick="openPopup24()">Contacts</button>
+ <button onclick="openPopup14()">Contacts</button>
 
  <script>
-                 function openPopup24() {
+                 function openPopup14() {
                  window.open("contacts.html", "newWindow", "width=500,height=700");
                  }</script>
 
@@ -170,14 +174,6 @@
  <script>
                  function openPopup13() {
                  window.open("patient_details.html", "newWindow", "width=500,height=700");
-                 }</script>
-
-
-	 <button onclick="openPopup14()">Medical Files</button>
-
- <script>
-                 function openPopup14() {
-                 window.open("marie_medfiles_grid.html", "newWindow", "width=500,height=700");
                  }</script>
 
                  
@@ -539,11 +535,17 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 		
 			<!-- Articles -->
 			<div class="row">
-				<article class="col-xs-12">
+				<article class="auto-style8">
+				
+				
+					<div class="auto-style8">
 				
 				
 					<strong><span class="auto-style7">Marie L Rose</span></strong>
-				<p><img alt="" class="auto-style6" height="123" src="Marie.jpg" width="109"><br>   <h2>Calendar</h2></p>
+					</div>
+				<p class="auto-style8"><img alt="" class="auto-style6" height="123" src="Marie.jpg" width="109"><br>   
+					<h2 class="auto-style8">Calendar</h2></p>
+					<div class="auto-style8">
 				<a href=""></a>
 
 
@@ -555,6 +557,9 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 				
 				
 				<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&src=ZGVyb3NlMTIzNEBnbWFpbC5jb20&src=aDU1c2FjZXN2cDQxMGY2cmhmZnE2djRwZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73&color=%23D50000&color=%230B8043" style="border:solid 1px #777" width="750" height="600" frameborder="0" scrolling="no" name="Calendar"></iframe>
+			
+
+                	</div>
 			
 
                 <p>				
@@ -794,5 +799,3 @@ function openPopup13() {
 </body>
 
 </html>
-
-

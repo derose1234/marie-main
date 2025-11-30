@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>2025 Data Input Marie Medical</title>
+<style type="text/css">
+.auto-style1 {
+	color: #FF00FF;
+	background-color: #FFFFFF;
+	font-size: x-large;
+}
+.auto-style2 {
+	font-size: x-large;
+}
+.auto-style7 {
+	color: #FF00FF;
+	background-color: #FFFFFF;
+	font-size: large;
+}
+.auto-style8 {
+	font-size: xx-large;
+}
+.auto-style9 {
+	background-color: #FFFFCC;
+}
+</style>
+</head>
+
+<body style="background-color: #FFFFCC">
+<span class="auto-style8" style="font-size: xx-large (36 pt); font-family: Arial; font-weight: bold">2025 Marie Medical Data Input</span>
+
+<form id="form" class="container m-4 pl-4">
+<table style="width: 100%">
+	<tr>
+		<td class="auto-style9" style="width: 468px" valign="top">
+		
+    <!--Entry Date     -->
+      <div class="field">
+        <label class="label"><span class="auto-style2">Entry Date</span></label>
+        <div class="control">
+          <input
+            class="auto-style2"
+            type="date"
+            placeholder="Entry Date"
+            name="Entry Date" style="width: 212px"/>
+          <span class="auto-style2"></span></div>
+      </div>
+      <!--End Entry Date     -->
+      
+      <!--Last Contact     -->
+      <div class="field">
+        <label class="label"><span class="auto-style2">Last Contact</span></label>
+        <div class="control">
+          <input
+            class="auto-style2"
+            type="date"
+            placeholder="Last Contact"
+            name="Last Contact" style="width: 209px"/>
+           <span class="auto-style2"></span></div>
+      </div>
+      <!--End Last Contact     -->
+      
+      <!-- Phone    -->
+      <div class="field">
+        <label for="phone">
+  			   <br />
+			Phone Number: <br />
+		  *<span class="auto-style7">Required</span>*<br class="auto-style2" />
+  			   Format: (123-456-7890)</label><div class="control">
+         <input
+         type="tel"
+         id="Phone"
+         name="Phone"
+         placeholder="Phone"
+         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+         required style="width: 213px" class="auto-style2" /></div>
+          </div>
+            <!-- End Phone    -->
+
+          <!-- Email    -->
+          <div class="field">
+            <label class="label"><br />
+				Email</label>
+          <div class="control">
+          <input
+            class="auto-style2"
+            type="email"
+            placeholder="Your Email"
+            name="Email" style="width: 206px" class="auto-style2" />
+          
+          </div>
+          </div>
+             <!-- End Email    -->
+
+              <!-- Website     -->
+        <div class="field">
+        <label class="label"><br />
+			Website</label>
+        <div class="control">
+          <input
+            class="auto-style2"
+            type="text"
+            placeholder="Website"
+            name="Website" style="width: 208px"
+          />
+        </div>
+        </div>
+			<!--End Website     -->
+			
+            </td>
+		<td class="auto-style9" valign="top">
+           <!-- Clinic or Doctor    -->
+           <label class="label"><span class="auto-style2">Clinic or Doctor</span></label><span class="auto-style2"> :
+        		</span>
+        <label for="phone">
+  			  *<span class="auto-style1">Required</span><span class="auto-style2">*</span></label><br class="auto-style2" />
+  			  			
+  			    			  
+    <select class="auto-style2" 
+    id="Clinic Or Doctor" 
+    name="Clinic or Doctor" required style="width: 355px">
+      <option value="selected" >Choose...</option>
+      <option value="Providence Home Health">Providence Home Health</option>
+      <option value="EyeHealth Northwest">EyeHealth Northwest 503-656-4221</option>
+      <option value="PROVIDENCE HEART CLINIC">PROVIDENCE HEART CLINIC (Alejandro Perez) 503-962-1000</option>
+      <option value="Dr Kevin J. Jamison">Neurological Specialties(Dr Kevin J. Jamison) 503-742-6900</option>
+      <option value="Other">Other</option>
+      <option value="Canby Immediate Care">Canby Immediate Care 503-483-9226</option>
+      <option value="Eastside Ortho">Eastside Ortho 503 659 1769</option> 
+      <option value="Willamette Falls Hostipal">Willamette Falls Hostipal 503-656-1631</option>
+      <option value="MyChart">MyChart</option>
+      <option value="Bolouri Dental Group">Bolouri Dental Group 503-654-0613 </option>
+      <option value="Fred Meyer">Fred Meyer 503-657-1483</option>
+      <option value="Providence Milwaukie Healing Place">Providence Milwaukie Healing Place(Hearing Aid) 503-513-8600</option>
+      <option value="Beavercreek Health Center">Beavercreek Health Center (Jennifer Moon) 503-655-8471</option>
+      <option value="Infectious-Disease">Infectious-Disease 503-216-7000</option>
+      <option value="Family Resource">Family Resource 971-231-2372</option>
+      <option value="Case Manager-Margie Conway">Case Manager-Margie Conway (Oregon Department of Human Services) 503-983-6150</option>
+      <option value="Oregon Spine Care">Oregon Spine Care (503) 828-1150</option>
+
+    </select><span class="auto-style2"> 
+            
+            <!--End Clinic or Doctor     -->
+            
+            
+            <!--   Notes  -->
+      <div class="field">
+        <label class="label">Notes</label>
+        <div class="control">
+          <textarea
+            class="auto-style2"
+            placeholder="Notes"
+            name="Notes" style="width: 253px; height: 82px" cols="20" rows="1"
+          ></textarea>
+          <!-- End Notes   -->
+          
+          
+          <!--   Appointment Date    -->    
+      
+      <div class="field">
+        <label class="label">Appointment Date</label>
+        <div class="control">
+          <input
+            class="auto-style2"
+            type="date"
+            placeholder="Appointment Date"
+            name="Appointment Date" style="width: 203px"
+          />
+        </div>
+      </div>
+      <!-- End Appointment Date    -->
+      
+      <!-- Appointment Time    -->
+        <div class="field">
+        <label class="label">Appointment Time</label>
+        <div class="control">
+          <input
+            class="auto-style2"
+            type="time"
+            placeholder="Appointment Time"
+            name="Appointment Time" style="width: 198px"
+          />
+         </div>
+      </div>
+   <!-- End Appointment Time    -->
+   
+   <!--Follow Up     -->
+          
+        <label class="label"><br />
+			Followup</label>
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" 
+            name="Followup" 
+            value="yes" class="auto-style2" />
+          <span class="auto-style2"></span>
+        	<br />
+        	<!-- End Follow Up    -->
+        	
+        	<!--  Upload Document   -->
+        	
+        	
+        <label class="label">Upload Document (Optional)</label>
+        <div class="control">
+          <div class="file has-name is-fullwidth">
+            <label class="file-label">
+              <input
+                class="auto-style2"
+                type="file"
+                name="theFile"
+                id="fileInput"
+                accept="*/*"
+              />
+              <!-- End Upload File    -->
+              
+              <!-- Choose File    -->
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+			  Choose a file 
+              </span>
+              <span class="auto-style2" id="fileNameDisplay">
+                No file selected
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="control">
+          <button class="auto-style2" type="submit" id="submit-button">
+            Enter
+          </button>
+        </div>
+        <!--End Enter Button     -->
+        
+        <!--Cancel Button     -->
+       
+        <div class="control">
+          <button
+            class="auto-style2"
+            type="button"
+            onclick="document.getElementById('form').reset(); document.getElementById('fileNameDisplay').textContent = 'No file selected';"
+          >
+            Cancel
+          </button>
+        	
+		  </div>
+		   
+      
+       
+
+      
+      
+      
+      
+      
+   
+            
+            
+		
+  
+  	  </td>
+	</tr>
+	
+</table>
+</form>
+
+
+
+
+
+
+
+
+      
+        
+
+     
+      
+      <div class="field is-grouped">
+        <div class="control">
+			<span class="auto-style2">
+			<a href="https://drive.google.com/drive/folders/1HmtkRcQmTcwLFaRSpQJYc3rU829k3CFb">
+			Check Uploaded File</a></span><br class="auto-style2" />
+			<br class="auto-style2" />
+        </div>
+      </div>
+      
+      
+		<span class="auto-style2">
+<a href="https://docs.google.com/spreadsheets/d/1e55FvBlEJ2JjJSR7e6S6LLZCIKq0RVJR5Lxb2twqL1w/edit?gid=0#gid=0" target="_blank">
+Data&nbsp; Sheet</a></span>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+      "
+    ></div>
+
+    <span class="auto-style2">
+
+    <script>
+      const form = document.getElementById("form");
+      const submitButton = document.getElementById("submit-button");
+      const messageDiv = document.getElementById("message");
+      const fileInput = document.getElementById("fileInput");
+      const fileNameDisplay = document.getElementById("fileNameDisplay");
+
+      // Update displayed filename on file selection
+      fileInput.addEventListener("change", function () {
+        if (this.files && this.files.length > 0) {
+          fileNameDisplay.textContent = this.files[0].name;
+        } else {
+          fileNameDisplay.textContent = "No file selected";
+        }
+      });
+
+      // Function to handle file upload
+      async function uploadFile(file) {
+        return new Promise((resolve, reject) => {
+          const fr = new FileReader();
+          fr.onload = (e) => {
+            const data = e.target.result.split(",");
+            const obj = {
+              fileName: file.name,
+              mimeType: data[0].match(/:(\w.+);/)[1],
+              data: data[1],
+            };
+            resolve(obj);
+          };
+          fr.onerror = reject;
+          fr.readAsDataURL(file);
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        messageDiv.textContent = "Submitting...";
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "beige";
+        messageDiv.style.color = "black";
+        submitButton.disabled = true;
+        submitButton.classList.add("is-loading");
+
+        try {
+          const formData = new FormData(this);
+          const formDataObj = {};
+
+          // Convert FormData to object
+          for (let [key, value] of formData.entries()) {
+            formDataObj[key] = value;
+          }
+
+          // Handle file upload if a file is selected
+          if (fileInput.files.length > 0) {
+            const fileObj = await uploadFile(fileInput.files[0]);
+            formDataObj.fileData = fileObj; // Add file data to form data
+          }
+
+          // Submit form data
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbzEQh5-Q4cTBZlvb1CwKcHoRJ3tkMQUdMx4VEDcuy4WgdWWxEzIJ8_scqWbMsFfFNl5/exec";
+
+          const response = await fetch(scriptURL, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(formDataObj),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          });
+
+          const data = await response.json();
+
+          if (data.status === "success") {
+            messageDiv.textContent =
+              data.message || "Data submitted successfully!";
+            messageDiv.style.backgroundColor = "#48c78e";
+            messageDiv.style.color = "white";
+            form.reset();
+            fileNameDisplay.textContent = "No file selected";
+          } else {
+            throw new Error(data.message || "Submission failed");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          messageDiv.textContent = "Error: " + error.message;
+          messageDiv.style.backgroundColor = "#f14668";
+          messageDiv.style.color = "white";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.classList.remove("is-loading");
+
+          setTimeout(() => {
+            messageDiv.textContent = "";
+            messageDiv.style.display = "none";
+          }, 4000);
+        }
+      });
+
+      // Enhance cancel button to reset file input display
+      const cancelButton = form.querySelector("button.is-danger");
+      cancelButton.addEventListener("click", function () {
+        form.reset();
+        fileNameDisplay.textContent = "No file selected";
+        messageDiv.style.display = "none";
+      });
+    </script>
+
+</span>
+
+</body>
+
+</html>

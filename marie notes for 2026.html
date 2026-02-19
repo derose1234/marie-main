@@ -1,46 +1,58 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />    -->
     <title>2025 Light Green Notes with sheets and upload file</title>
-   
-    <style type="text/css">
+      <style type="text/css">
 .auto-style1 {
-	text-align: center;
+  text-align: center;
+}
+.center-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+body {
+  background-color: #99FF66;
+}
+table {
+  width: 100%;
+}
+input.input[type=date], input.input[type=time], input.input[type=tel], input.input[type=email], input.input[type=text], textarea.textarea, select.form-control {
+  width: 200px;
+}
+textarea.textarea {
+  height: 80px;
+}
+#message {
+  display: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 </style>
-   
+
   </head>
-  <body style="background-color: #99FF66">
-<center>          
-    <section class="auto-style1">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">2025 Marie's Notes Light Green Notes with sheets and upload file</h1>
-        </div>
+<body>
+  <section class="auto-style1 center-section">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">2025-2026 Marie's Notes Light Green Notes with sheets and upload file 
+		(Updated 2-18-2026)</h1>
       </div>
-    </section>
-    
-   
-    
-     
-    
-    
-    
-    </center>
-    
-   
-    
-     
-    
-    
-    
-    <table style="width: 100%">
-		<tr>
-			<td class="auto-style1" style="width: 348px" valign="top"> <form id="form" class="container m-4 pl-4">
+    </div>
+  </section>
+
+    <table>
+    <tbody>
+    <tr>
+      <td class="auto-style1" style="width: 348px" valign="top"><form id="form" class="container m-4 pl-4">
     	<div class="auto-style1">
     <!--Entry Date     -->
       <div class="field">
@@ -50,7 +62,7 @@
             class="input"
             type="date"
             placeholder="Entry Date"
-            name="Entry Date" style="width: 212px"
+            name="Entry Date"
           />
         </div>
       </div>
@@ -64,7 +76,7 @@
             class="input"
             type="date"
             placeholder="Last Contact"
-            name="Last Contact" style="width: 209px"
+            name="Last Contact"
           />
         </div>
       </div>
@@ -94,7 +106,7 @@
             class="input"
             type="text"
             placeholder="Website"
-            name="Website" style="width: 208px"
+            name="Website"
           />
         </div>
       </div>
@@ -111,7 +123,7 @@
             class="input"
             type="email"
             placeholder="Your Email"
-            name="Email" style="width: 206px"
+            name="Email"
           />
         </div>
       </div>
@@ -122,7 +134,7 @@
           <textarea
             class="textarea"
             placeholder="Notes"
-            name="Notes" style="width: 253px; height: 82px"
+            name="Notes"
           ></textarea>
         </div>
       </div>
@@ -138,7 +150,7 @@
     <br>
     <select class="form-control form-control-sm" 
     id="Clinic Or Doctor" 
-    name="Clinic or Doctor" required style="width: 265px">
+    name="Clinic or Doctor" required>
       <option value="" selected>Choose...</option>
       <option value="EyeHealth Northwest">EyeHealth Northwest 503-656-4221</option>
       <option value="PROVIDENCE HEART CLINIC">PROVIDENCE HEART CLINIC (Alejandro Perez) 503-962-1000</option>
@@ -182,7 +194,7 @@
             class="input"
             type="date"
             placeholder="Appointment Date"
-            name="Appointment Date" style="width: 203px"
+            name="Appointment Date"
           />
         </div>
       </div>
@@ -194,7 +206,7 @@
             class="input"
             type="time"
             placeholder="Appointment Time"
-            name="Appointment Time" style="width: 198px"
+            name="Appointment Time"
           />
         </div>
       </div>
@@ -204,19 +216,17 @@
           <textarea
             class="textarea"
             placeholder="Any additional information"
-            name="Additional Information" style="width: 275px; height: 91px"
+            name="Additional Information"
           ></textarea>
         </div>
       </div>
-      
-      
-       <div class="field">
+     <div class="field">
         <label class="label">Followup</label>
         <div class="control">
           <label class="checkbox">
             <input type="checkbox" 
             name="Followup" 
-            value="yes" /> 
+            value="yes"
           </label>
         </div>
       </div>
@@ -258,10 +268,7 @@
           </div>
         </div>
       </div>
-      <input type="hidden" name="filename" id="actualFilename" />
-
-     
-      
+      <input type="hidden" name="filename" id="actualFilename">
       <div class="field is-grouped">
         <div class="control">
           <button class="button is-primary" type="submit" id="submit-button">
@@ -276,40 +283,21 @@
           >
             Cancel
           </button>
-        	<br><br>
+          <br><br>
 
-		</div>
-			</div>
-			
-			</td>
-<center>          
-			<td>&nbsp; 
-  <iframe id="I1" height="900" name="I1" src="https://docs.google.com/spreadsheets/d/1e55FvBlEJ2JjJSR7e6S6LLZCIKq0RVJR5Lxb2twqL1w/edit?gid=0#gid=0" style="width: 100%">Your browser does not support inline frames or is currently configured not to display inline frames.
-	</iframe>
-</td>
-		</tr>
-	</table>
-    
-   
-    
-     
-    
-    
-    
-  
-			
+    </div>
       </div>
-    	</div>
-    </form>
+
+      </form></td>
+      <td style="text-align: center;">
+  <iframe id="I1" height="900" name="I1" title="Marie's Notes Spreadsheet" src="https://docs.google.com/spreadsheets/d/1e55FvBlEJ2JjJSR7e6S6LLZCIKq0RVJR5Lxb2twqL1w/edit?gid=0#gid=0" style="width: 1215px">Your browser does not support inline frames or is currently configured not to display inline frames.
+  </iframe>
+</td>
+    </tr>
+    </tbody>
+  </table>
     <div
       id="message"
-      style="
-        display: none;
-        margin: 20px;
-        padding: 10px;
-        border-radius: 4px;
-        font-weight: bold;
-      "
     ></div>
 
     <script>

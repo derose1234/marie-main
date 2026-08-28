@@ -52,6 +52,17 @@
 	.auto-style8 {
 	text-align: center;
 }
+
+    .popup-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .popup-toolbar .btn {
+        white-space: normal;
+    }
 	
 	</style>
 	
@@ -59,241 +70,28 @@
 </head>
 
 <body>
-<button onclick="openPopup1()">Medications</button>
-
- <script>
-                 function openPopup1() {
-                 window.open("medications.html", "newWindow", "width=500,height=700");
-                 }</script>
-	
-               
-                 
-                 
-<button onclick="openPopup2()">Calendar</button>
-
- <script>
-                 function openPopup2() {
-                 window.open("calendar.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-<button onclick="openPopup3()">PDF Folder Grid</button>
-
- <script>
-                 function openPopup3() {
-                 window.open("pdf_folder_grid.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
- <button onclick="openPopup14()">Contacts</button>
-
- <script>
-                 function openPopup14() {
-                 window.open("contacts.html", "newWindow", "width=500,height=700");
-                 }</script>
-
-
-
-                
-                 
-<button onclick="openPopup4()">Current RX</button>
-
- <script>
-                 function openPopup4() {
-                 window.open("current_run_RX.html", "newWindow", "width=500,height=700");
-                 }</script>
-
-
-<button onclick="openPopup5()">Image's</button>
-
- <script>
-                 function openPopup5() {
-                 window.open("image3.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-                 
- <!-- 
-           
-<button onclick="openPopup6()">Blood and Labs</button>
-
- <script>
-                 function openPopup6() {
-                 window.open("bloodandlabs.html", "newWindow", "width=500,height=700");
-                 }</script>
-    -->
-
-<button onclick="openPopup7()">Diagnosis and Treatment</button>
-
- <script>
-                 function openPopup7() {
-                 window.open("diagnosis_and_treatment.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-                 
-                 
-<button onclick="openPopup8()">Medical Card</button>
-
- <script>
-                 function openPopup8() {
-                 window.open("medicalcard.html", "newWindow", "width=500,height=700");
-                 }</script>
-
-
-<button onclick="openPopup9()">Notes 2024</button>
-
- <script>
-                 function openPopup9() {
-                 window.open("notes_2024.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-                 
-                 
-<button onclick="openPopup10()">Notes 2025</button>
-
- <script>
-                 function openPopup10() {
-                 window.open("notes_2025.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-                 
-<button onclick="openPopup11()">Medical Contacts 2025</button>
-
- <script>
-                 function openPopup11() {
-                 window.open("contacts.html", "newWindow", "width=500,height=700");
-                 }</script>
-                 
-                 
-                 <button onclick="openPopup12()">Notes 1995-2023</button>
-
- <script>
-                 function openPopup12() {
-                 window.open("notes_1995_2023.html", "newWindow", "width=500,height=700");
-                 }</script>
-
-
-
-                 <button onclick="openPopup13()">Patient Details</button>
-
- <script>
-                 function openPopup13() {
-                 window.open("patient_details.html", "newWindow", "width=500,height=700");
-                 }</script>
+<nav class="popup-toolbar" aria-label="Medical records">
+    <a class="btn btn-secondary js-popup" href="medications.html">Medications</a>
+    <a class="btn btn-secondary js-popup" href="calendar.html">Calendar</a>
+    <a class="btn btn-secondary js-popup" href="pdf_folder_grid.html">PDF Folder Grid</a>
+    <a class="btn btn-secondary js-popup" href="contacts.html">Contacts</a>
+    <a class="btn btn-secondary js-popup" href="current_run_RX.html">Current RX</a>
+    <a class="btn btn-secondary js-popup" href="image3.html">Images</a>
+    <a class="btn btn-secondary js-popup" href="diagnosis_and_treatment.html">Diagnosis and Treatment</a>
+    <a class="btn btn-secondary js-popup" href="medicalcard.html">Medical Card</a>
+    <a class="btn btn-secondary js-popup" href="notes_2024.html">Notes 2024</a>
+    <a class="btn btn-secondary js-popup" href="notes_2025.html">Notes 2025</a>
+    <a class="btn btn-secondary js-popup" href="contacts.html">Medical Contacts 2025</a>
+    <a class="btn btn-secondary js-popup" href="notes_1995_2023.html">Notes 1995–2023</a>
+    <a class="btn btn-secondary js-popup" href="patient_details.html">Patient Details</a>
+</nav>
+<p id="popup-status" class="sr-only" role="status" aria-live="polite"></p>
 
                  
-                 
-                 
-
-
-                 
-            
-                 
-
-
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-
-   <!--<table style="width: 100%" align="left">
-	   <tr>
-	   
-		   <td style="width: 78px"><script>// JavaScript popup window function
-	function basicPopup(url) {
-newWindow = window.open(url,'newWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://nba.com" onclick="basicPopup(this.href);return false">NBA.com</a></td>
-
-
-		   <td style="width: 65px"><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-		   
-
-		   <td style="width: 65px"><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-		   <td><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-   <td><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-   <td><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-   <td><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-		 
-		   
-		      <td><script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
-<a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
-</td>
-
-	   </tr>
-   </table>-->
-   <div class="auto-style3">       
-	  
-		   					
-
-
-
+    
 
 		<!-- Left Column -->
-		</div>
+		
 		<div class="col-sm-3">
               <strong> <span class="auto-style2"></span></strong>
 			<!-- List-Group Panel --><div class="card">
@@ -339,7 +137,7 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 	}
 
 </script>
-<a class="list-group-item list-group-item-action" href="https://derose1234.github.io/marie-main/pdf_marie_medical/index.html" onclick="basicPopup(this.href);return false">New PDF folder</a>
+<a class="list-group-item list-group-item-action" href="https://github.com/derose1234/marie-main/pdf_marie_medical" onclick="basicPopup(this.href);return false">New PDF folder</a>
 
 		<!--end new pdf folder     -->
 		
@@ -568,11 +366,7 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 		<!-- Center Column -----------------------------------------------------------------------------------Center Column-->
 		<div class="col-sm-6">
 		
-			<!-- Alert----
-			<div class="alert alert-success alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Synergize:</strong> Seamlessly visualize quality intellectual capital!
-			</div>-->		
+			
 		
 			<!-- Articles -->
 			<div class="row">
@@ -582,10 +376,10 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 					<div class="auto-style8">
 				
 				
-					<strong><span class="auto-style7">Marie L Rose</span></strong>
+					
 					</div>
-				<p class="auto-style8"><img alt="" class="auto-style6" height="123" src="Marie.jpg" width="109"><br>   
-					<h2 class="auto-style8">Calendar</h2></p>
+				  
+					<h2 class="auto-style8">Calendar</h2>
 					<div class="auto-style8">
 				<a href=""></a>
 
@@ -833,6 +627,64 @@ function openPopup13() {
       $('[data-toggle="popover"]').popover()
     })
     </script> 
+
+    <script>
+    (function () {
+        'use strict';
+
+        var status = document.getElementById('popup-status');
+
+        function openPopup(url, name, width, height) {
+            var popupWidth = Math.min(width || 700, screen.availWidth);
+            var popupHeight = Math.min(height || 700, screen.availHeight);
+            var left = Math.max(0, Math.round(window.screenX + (window.outerWidth - popupWidth) / 2));
+            var top = Math.max(0, Math.round(window.screenY + (window.outerHeight - popupHeight) / 2));
+            var features = [
+                'width=' + popupWidth,
+                'height=' + popupHeight,
+                'left=' + left,
+                'top=' + top,
+                'resizable=yes',
+                'scrollbars=yes'
+            ].join(',');
+
+            return window.open(url, name || 'medicalPortalPopup', features);
+        }
+
+        document.addEventListener('click', function (event) {
+            var link = event.target.closest('.js-popup');
+
+            if (!link) {
+                return;
+            }
+
+            var popup = openPopup(link.href, link.dataset.popupName);
+
+            if (!popup) {
+                if (status) {
+                    status.textContent = 'The popup was blocked. Opening the page in this tab instead.';
+                }
+                return;
+            }
+
+            event.preventDefault();
+            try {
+                popup.opener = null;
+            } catch (error) {
+                // Cross-origin windows may restrict access; navigation still succeeded.
+            }
+            popup.focus();
+            if (status) {
+                status.textContent = link.textContent.trim() + ' opened in a new window.';
+            }
+        });
+
+        // Retains compatibility with the existing menu links.
+        window.basicPopup = function (url) {
+            return openPopup(url, 'medicalPortalMenu', 700, 500);
+        };
+    }());
+    </script>
     
 	<!-- Placeholder Images -->
 	<script src="js/holder.min.js"></script>

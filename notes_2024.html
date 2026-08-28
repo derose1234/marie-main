@@ -1,16 +1,69 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+﻿<!doctype html>
+<html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Notes 2024</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #f5f7fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .spreadsheet-container {
+      width: 100%;
+      max-width: 1400px;
+      height: calc(100vh - 48px);
+      min-height: 700px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .spreadsheet-container iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 8px;
+      }
+
+      .spreadsheet-container {
+        height: calc(100vh - 16px);
+        min-height: 600px;
+        border-radius: 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRbxfHXfezF_iAi_vYMKr6E1VUPYFiZ3LpKxsT_AXvgTDP629URF9PLkAgT0oa_ARBxEJQ1N2uKJYlH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" height="900" name="notes 2024" width="100%"></iframe>
-
-
-
+  <main class="spreadsheet-container">
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRbxfHXfezF_iAi_vYMKr6E1VUPYFiZ3LpKxsT_AXvgTDP629URF9PLkAgT0oa_ARBxEJQ1N2uKJYlH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+      title="Notes 2024 Spreadsheet"
+      loading="lazy">
+    </iframe>
+  </main>
 </body>
-
 </html>

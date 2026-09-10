@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf3e9">
+  <title>Marie's Medical Entry</title>
+  <style>
+    :root { color-scheme: light; --page:#edf3e9; --surface:#fffefa; --ink:#223d30; --muted:#607365; --line:#d5e0d2; --green:#315e40; --soft:#f2f6ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--page); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .page { max-width:960px; margin:0 auto; padding:36px 24px 48px; }
+    .masthead { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:32px; }
+    .brand { font-weight:750; display:flex; gap:10px; align-items:center; }
+    .brand-mark { width:32px; height:32px; border-radius:9px; background:var(--green); color:white; display:grid; place-items:center; font-size:23px; }
+    .version { color:var(--muted); font-size:14px; }
+    h1 { margin:0; font-size:clamp(28px,5vw,40px); line-height:1.2; letter-spacing:-1.3px; }
+    .subtitle { margin:12px 0 26px; color:var(--muted); }
+    form { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:32px; box-shadow:0 12px 36px #24442d08; }
+    fieldset { min-width:0; border:0; padding:0; margin:0 0 28px; }
+    legend { font-size:18px; font-weight:700; padding:0; margin-bottom:18px; }
+    .section-number { display:inline-grid; place-items:center; width:27px; height:27px; margin-right:9px; background:#e8efdf; border-radius:50%; font-size:13px; color:var(--green); }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px 24px; }
+    .field { display:flex; flex-direction:column; gap:7px; min-width:0; }
+    label { font-size:15px; font-weight:600; }
+    input,select,textarea,button { font:inherit; }
+    input:not([type=checkbox]):not([type=hidden]),select,textarea { width:100%; min-width:0; padding:11px 13px; border:1px solid #bbcbb9; border-radius:8px; color:var(--ink); background:white; }
+    input:not([type=checkbox]),select { min-height:48px; }
+    input::placeholder,textarea::placeholder { color:#758273; opacity:1; }
+    textarea { min-height:145px; resize:vertical; }
+    select { text-overflow:ellipsis; }
+    :is(input,select,textarea,button,a):focus-visible { outline:3px solid #7fa264; outline-offset:3px; }
+    .divider { border-top:1px solid var(--line); padding-top:24px; }
+    .flags { padding:18px 20px 20px; border:1px solid #c9d9b9; border-radius:12px; background:var(--soft); }
+    .flags legend { margin:0; padding:0 7px; font-size:16px; }
+    .flag-options { display:flex; flex-wrap:wrap; gap:12px 28px; }
+    .check { display:flex; align-items:center; gap:10px; min-height:40px; cursor:pointer; }
+    input[type=checkbox] { width:21px; height:21px; margin:0; accent-color:var(--green); flex-shrink:0; }
+    .full { grid-column:1/-1; }
+    .optional { color:var(--muted); font-weight:400; }
+    .upload { background:var(--soft); border:1px dashed #b7c9af; border-radius:10px; padding:16px; }
+    input[type=file] { border:0!important; background:transparent!important; padding:0!important; min-height:0!important; }
+    input[type=file]::file-selector-button { border:1px solid #b7c9af; border-radius:6px; padding:8px 12px; background:white; color:var(--ink); margin-right:12px; cursor:pointer; }
+    .file-name { margin:9px 0 0; font-size:14px; color:var(--muted); overflow-wrap:anywhere; }
+    .actions { display:flex; align-items:center; gap:12px; margin-top:28px; border-top:1px solid var(--line); padding-top:24px; }
+    button { min-height:48px; padding:11px 22px; border-radius:8px; cursor:pointer; font-weight:650; border:1px solid var(--green); transition:background .15s; }
+    .primary { background:var(--green); color:white; }
+    .primary:hover { background:#244b31; }
+    .secondary { color:var(--ink); background:transparent; border-color:#bbcbb9; }
+    .secondary:hover { background:var(--soft); }
+    button:disabled { opacity:.65; cursor:wait; }
+    .message { border-radius:8px; padding:14px 16px; margin-top:20px; overflow-wrap:anywhere; }
+    .message[data-state=pending] { background:#edf2e6; }
+    .message[data-state=success] { background:#e0f1e1; color:#235332; }
+    .message[data-state=error] { background:#fbe9e5; color:#84372c; }
+    .resources { display:flex; gap:16px 28px; flex-wrap:wrap; justify-content:center; margin-top:24px; }
+    a { color:var(--green); text-underline-offset:4px; font-size:15px; }
+    @media(max-width:600px) { .page { padding:22px 14px 32px; } .masthead { margin-bottom:26px; } .version { font-size:12px; } form { padding:22px 18px; border-radius:14px; } .grid { grid-template-columns:1fr; gap:16px; } .actions button { flex:1; padding-inline:12px; } .flag-options { flex-direction:column; gap:4px; } }
+    @media(prefers-reduced-motion:reduce) { * { transition:none!important; } }
+  </style>
+  <script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+// -->
+</script>
+</head>
+<body onload="FP_preloadImgs(/*url*/'button3.jpg',/*url*/'button4.jpg')">
+  <main class="page">
+    <header class="masthead"><div class="brand"></div></header>
+    <h1>Marie's Medical Entry<span class="version">&nbsp;&nbsp;&nbsp; Updated 9-9-26</span></h1>
+    <p class="subtitle">Record an appointment, contact details, and notes in one place.</p>
+    <form id="form">
+      <fieldset>
+        <legend>Dates &amp; appointment</legend>
+        <div class="grid">
+          <div class="field"><label for="entry-date">Entry date</label><input id="entry-date" type="date" name="Entry Date"></div>
+          <div class="field"><label for="appointment-date">Appointment date</label><input id="appointment-date" type="date" name="Appointment Date"></div>
+          <div class="field"><label for="last-contact">Last contact</label><input id="last-contact" type="date" name="Last Contact"></div>
+          <div class="field"><label for="appointment-time">Appointment time</label><input id="appointment-time" type="time" name="Appointment Time"></div>
+        </div>
+      </fieldset>
+      <fieldset class="divider">
+        <legend>Clinic &amp; contact</legend>
+        <div class="grid">
+          <div class="field full"><label for="clinic">Clinic or doctor</label><select id="clinic" name="Clinic or Doctor"><option value="" selected disabled>Choose a clinic or doctor</option>
+<option value="EyeHealth Northwest">EyeHealth Northwest 503-656-4221</option>
+<option value="PROVIDENCE HEART CLINIC">PROVIDENCE HEART CLINIC (Alejandro Perez) 503-962-1000</option>
+<option value="Dr Kevin J. Jamison">Neurological Specialties(Dr Kevin J. Jamison) 503-742-6900</option>
+<option value="Dr Janet C. Ruzich-Hematology">Dr Janet C. Ruzich, DO (Hematology)</option>
+<option value="Other">Other</option>
+<option value="David Sr">David Sr</option>
+<option value="Amanda Allan Vandlac (Oregon Clinic Urology)">Amanda Allan Vandlac, MD 503-488-2323 The Oregon Clinic Urology</option>
+<option value="Robert G. Wheeler (Oregon Clinic Pulmonary) ">Robert G. Wheeler, MD 503-297-3778 The Oregon Clinic Pulmonary Critical Care</option>
+<option value="Ashley-Caregiver">Ashley-Caregiver</option>
+<option value="Providence PT">Providence PT</option>
+<option value="Canby Immediate Care">Canby Immediate Care 503-483-9226</option>
+<option value="Eastside Ortho">Eastside Ortho 503 659 1769</option>
+<option value="Willamette Falls Hostipal">Willamette Falls Hospital 503-656-1631</option>
+<option value="MyChart">MyChart</option>
+<option value="Bolouri Dental Group">Bolouri Dental Group 503-654-0613 </option>
+<option value="Fred Meyer">Fred Meyer 503-657-1483</option>
+<option value="Providence Milwaukie Healing Place">Providence Milwaukie Healing Place(Hearing Aid) 503-513-8600</option>
+<option value="Beavercreek Health Center">Beavercreek Health Center (Jennifer Moon) 503-655-8471</option>
+<option value="Infectious-Disease">Infectious-Disease 503-216-7000</option>
+<option value="Family Resource">Family Resource 971-231-2372</option>
+<option value="Case Manager-Amelia">Case Manager-Amelia (Oregon Department of Human Services) 971-380-0701</option>
+<option value="Oregon Spine Care">Oregon Spine Care (503) 828-1150</option></select></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" name="Phone" autocomplete="tel" placeholder="Phone number"></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" name="Email" autocomplete="email" placeholder="name@example.com"></div>
+          <div class="field full"><label for="website">Website</label><input id="website" type="text" inputmode="url" name="Website" placeholder="Website address" autocapitalize="none" spellcheck="false"></div>
+        </div>
+      </fieldset>
+      <fieldset class="flags" name="Group1">
+        <legend>Observations &amp; follow-up</legend>
+        <div class="flag-options">
+          <label class="check"><input type="checkbox" name="Possible Fall" value="yes">Possible fall</label>
+          <label class="check"><input type="checkbox" name="Followup" value="yes">Needs follow-up</label>
+          <label class="check"><input type="checkbox" name="Possible Seizure" value="yes">Possible seizure</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Notes &amp; documents</legend>
+        <div class="grid">
+          <div class="field full"><label for="notes">Notes</label><textarea id="notes" name="Notes" placeholder="Add details, questions, or next steps…"></textarea></div>
+          <div class="field full"><label for="fileInput">Upload document <span class="optional">(optional)</span></label><div class="upload"><input type="file" name="theFile" id="fileInput" aria-describedby="fileNameDisplay"><p class="file-name" id="fileNameDisplay" aria-live="polite">No file selected</p></div></div>
+        </div>
+      </fieldset>
+      <input type="hidden" name="filename" id="actualFilename">
+      <div class="actions"><button class="primary" type="submit" id="submit-button">Submit entry</button><button class="secondary" type="reset" id="reset-button">Clear form</button>
+		  <br><br></div>
+      <div id="message" class="message" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <noscript><p>Enable JavaScript to submit this form.</p></noscript>
+    </form>
+    <nav class="resources" aria-label="Related records"><a href="https://drive.google.com/drive/folders/1so9v1MeCWeTM0JMa-how70crF9Uqspfh" target="_blank" rel="noopener noreferrer">View uploaded documents ↗</a><a href="https://docs.google.com/spreadsheets/d/1e55FvBlEJ2JjJSR7e6S6LLZCIKq0RVJR5Lxb2twqL1w/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Open data sheet ↗</a><a href="https://derose1234.github.io/marie-main/" target="_blank" rel="noopener noreferrer">Marie Medical Portal ↗</a></nav>
+  </main>
+  <script>
+    (() => {
+      'use strict';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwY8PD5KbYUVX_Kf4xJ_Nwx580RghK2vMCHHYFVl4jhmKSQY1ApBLOBt9wZmcNGoHWA/exec';
+      const form = document.getElementById('form');
+      const submitButton = document.getElementById('submit-button');
+      const resetButton = document.getElementById('reset-button');
+      const message = document.getElementById('message');
+      const fileInput = document.getElementById('fileInput');
+      const fileName = document.getElementById('fileNameDisplay');
+      const actualFilename = document.getElementById('actualFilename');
+      let submitting = false;
+
+      function showMessage(text, state) {
+        message.textContent = text;
+        message.dataset.state = state;
+        message.hidden = false;
+      }
+
+      fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        fileName.textContent = file ? file.name : 'No file selected';
+        actualFilename.value = file ? file.name : '';
+      });
+
+      form.addEventListener('reset', () => {
+        fileName.textContent = 'No file selected';
+        message.hidden = true;
+        message.textContent = '';
+      });
+
+      function readFile(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const result = String(reader.result);
+            resolve({fileName:file.name, mimeType:file.type || 'application/octet-stream', data:result.slice(result.indexOf(',') + 1)});
+          };
+          reader.onerror = () => reject(new Error('The document could not be read. Please select it again.'));
+          reader.onabort = () => reject(new Error('Document reading was cancelled.'));
+          reader.readAsDataURL(file);
+        });
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (submitting || !form.reportValidity()) return;
+        submitting = true;
+        submitButton.disabled = true;
+        resetButton.disabled = true;
+        submitButton.textContent = 'Submitting…';
+        form.setAttribute('aria-busy', 'true');
+        const controls = [...form.querySelectorAll('input, select, textarea')];
+        const originalDisabled = controls.map(control => control.disabled);
+        try {
+          const values = new FormData(form);
+          const payload = Object.fromEntries(values.entries());
+          const file = fileInput.files[0];
+          // Preserve the existing JSON contract; binary data travels in fileData.
+          payload.theFile = {};
+          payload.filename = file ? file.name : '';
+          // Keep both legacy fall columns in sync with the single visible checkbox.
+          if (payload['Possible Fall'] === 'yes') payload['Possible Fall0'] = 'yes';
+          controls.forEach(control => { control.disabled = true; });
+          showMessage(file ? 'Preparing document and submitting entry…' : 'Submitting entry…', 'pending');
+          if (file) payload.fileData = await readFile(file);
+          const response = await fetch(scriptURL, {
+            redirect:'follow', method:'POST',
+            headers:{'Content-Type':'text/plain;charset=utf-8'},
+            body:JSON.stringify(payload)
+          });
+          if (!response.ok) throw new Error('The server returned an error (' + response.status + ').');
+          const data = await response.json();
+          if (data.status !== 'success') throw new Error(data.message || 'The server did not confirm the submission.');
+          form.reset();
+          showMessage(data.message || 'Entry submitted successfully.', 'success');
+        } catch (error) {
+          showMessage('Submission was not confirmed. Your entry is still here. Check the data sheet before retrying to avoid a duplicate. ' + (error.message || ''), 'error');
+        } finally {
+          controls.forEach((control, index) => { control.disabled = originalDisabled[index]; });
+          submitting = false;
+          submitButton.disabled = false;
+          resetButton.disabled = false;
+          submitButton.textContent = 'Submit entry';
+          form.removeAttribute('aria-busy');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

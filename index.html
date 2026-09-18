@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- Template by Quackit.com -->
 <html lang="en">
 <head>
@@ -64,6 +64,131 @@
         white-space: normal;
     }
 	
+
+    /* Readable left-side portal menu */
+    .portal-menu-card {
+        border: 1px solid #d7dce2;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+
+    .portal-menu-card .card-header {
+        background: #2f3e4e;
+        color: #fff;
+        padding: 14px 16px;
+    }
+
+    .portal-menu-card .card-title {
+        margin: 0;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: .02em;
+    }
+
+    .portal-menu-card .list-group-item {
+        display: block;
+        padding: 12px 14px;
+        font-size: 16px;
+        line-height: 1.35;
+        font-weight: 600;
+        color: #24313d;
+        background: #fff;
+        border-left: 4px solid transparent;
+        border-top: 1px solid #e7eaee;
+        white-space: normal;
+        word-break: normal;
+    }
+
+    .portal-menu-card .list-group-item small {
+        display: block;
+        margin-top: 3px;
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 500;
+        color: #68737d;
+    }
+
+    .portal-menu-card .list-group-item:hover,
+    .portal-menu-card .list-group-item:focus {
+        background: #f3f6f9;
+        color: #111;
+        border-left-color: #4b79a1;
+        text-decoration: none;
+    }
+
+    .menu-section-label {
+        padding: 9px 14px 7px;
+        background: #eef1f4;
+        color: #5b6670;
+        border-top: 1px solid #d9dee3;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .portal-menu-card {
+            position: sticky;
+            top: 12px;
+        }
+    }
+
+	
+    /* Light-blue menu treatment */
+    .portal-menu-card .card-header {
+        background: #dff1fb;
+        border-bottom: 1px solid #b9dced;
+    }
+
+    .portal-menu-card .card-title {
+        margin-bottom: 0;
+        color: #24566f;
+        font-weight: 700;
+    }
+
+    .portal-menu-card .menu-section-label {
+        background: #eef8fd;
+        color: #35677f;
+        border-top: 1px solid #d4eaf5;
+        border-bottom: 1px solid #d4eaf5;
+    }
+
+    .portal-menu-card .list-group-item {
+        border-left: 4px solid transparent;
+    }
+
+    .portal-menu-card .list-group-item:hover,
+    .portal-menu-card .list-group-item:focus {
+        background: #f3faff;
+        border-left-color: #8fc8e3;
+    }
+
+	
+    /* Top toolbar light-blue band */
+    .popup-toolbar {
+        background: #dff1fb;
+        border-bottom: 1px solid #b9dced;
+        padding: 14px 16px;
+        margin-bottom: 14px;
+    }
+
+    .popup-toolbar .btn {
+        background: #ffffff;
+        color: #24566f;
+        border: 1px solid #9fcfe6;
+        font-weight: 600;
+        box-shadow: 0 1px 2px rgba(0,0,0,.06);
+    }
+
+    .popup-toolbar .btn:hover,
+    .popup-toolbar .btn:focus {
+        background: #eef8fd;
+        color: #173f54;
+        border-color: #7dbbd8;
+    }
+
 	</style>
 	
 	
@@ -94,68 +219,25 @@
 		
 		<div class="col-sm-3">
               <strong> <span class="auto-style2"></span></strong>
-			<!-- List-Group Panel --><div class="card">
+			<!-- List-Group Panel --><div class="card portal-menu-card">
 				<div class="card-header p-b-0">
-					<h5 class="card-title"><i class="fa fa-random" aria-hidden="true"></i> Menu </h5>
+					<h5 class="card-title"><i class="fa fa-bars" aria-hidden="true"></i> Quick Links</h5>
 				</div>
 				<div class="list-group list-group-flush">
-					
-					
-					
-					
-					
-					
-					
-					
-					<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
+<div class="menu-section-label">Everyday</div>
 <a class="list-group-item list-group-item-action" href="https://mail.google.com/mail/u/0/?tab=rm&amp;ogbl#inbox" onclick="basicPopup(this.href);return false">David Email</a>
 
 
 <!--  2025-2026 Medical input   -->
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
 <a class="list-group-item list-group-item-action" href="https://derose1234.github.io/marie-main/green_form_9-9-26.html" onclick="basicPopup(this.href);return false">2025-2026 Daily Entry Form w/file upload</a>
 
 
 			<!--------------------------------End 2025-2026 Medical input     --------------------------------------------->
-			
-			
-
-	
-
-		
-					
-					
-					
-					<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
+<div class="menu-section-label">Patient Portals</div>
 <a class="list-group-item list-group-item-action" href="https://orca.myonlinechart.org/affiliate/Authentication/Login?" onclick="basicPopup(this.href);return false">MyChart</a>
 
 					
 	<!-----------------------------------------MyChart-------------------------------------------MyChart------------------------------------------------------------------------------>
-	
-				
-					
-					
-					<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
 <a class="list-group-item list-group-item-action" href="https://login.providencehealthplan.com/login?state=hKFo2SBDbzVpSEM2eER6S2hmWFVKRzl4anU2YWtVMVRMZnQ1WaFupWxvZ2luo3RpZNkgS0l5WmN1akhuYkE5Wmh0TFJYQ0NGbkxSdmVLMWdvVTajY2lk2SBKMndMVkljckVlR0xZc0Z1MmZRODZPTGRBblQ1U2w0RA&amp;client=J2wLVIcrEeGLYsFu2fQ86OLdAnT5Sl4D&amp;protocol=samlp" onclick="basicPopup(this.href);return false">MyProvidence</a>
 
 					
@@ -164,156 +246,50 @@ popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50
 				
 					
 	<!-----------------------------------------Bolouri Dental Group-------------------------------------------Bolouri Dental Group------------------------------------------------------------------------------>
-					
-			<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes,directories=yes, status=yes')
-	}
-
-</script>
+<div class="menu-section-label">Doctors &amp; Clinics</div>
 <a class="list-group-item list-group-item-action" href="https://bolouridentalgroup.com/" onclick="basicPopup(this.href);return false">Bolouri Dental Group</a>
 		
 	
 
 
-	<!-----------------------------------------Oregon Spine Care-------------------------------------------Oregon Spine Care------------------------------------------------------------------------------>				
-					
-					
-					<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
+	<!-----------------------------------------Oregon Spine Care-------------------------------------------Oregon Spine Care------------------------------------------------------------------------------>
 <a class="list-group-item list-group-item-action" href="https://www.oregonspinecare.org/" onclick="basicPopup(this.href);return false">Oregon Spine Care</a>
 
 <!-----------------------------------------Oregon Clinic-------------------------------------------Oregon Clinic------------------------------------------------------------------------------>
-
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
 <a class="list-group-item list-group-item-action" href="https://www.oregonclinic.com/" onclick="basicPopup(this.href);return false">Oregon Clinic</a>
 
 <!-----------------------------------------PPS RX-------------------------------------------PPS RX------------------------------------------------------------------------------>
-			<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
+<div class="menu-section-label">Pharmacy &amp; Coverage</div>
 <a class="list-group-item list-group-item-action" href="https://www.ppsrx.com/" onclick="basicPopup(this.href);return false">PPS RX</a>
-
-				<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
 <a class="list-group-item list-group-item-action" href="https://one.oregon.gov/UserRegistration/LoginCA/" onclick="basicPopup(this.href);return false">Oregon Health Plan</a>
 
 
 <!-----------------------------------------Google Voice------------------------------------------Google Voice----------------------------------------------------------------------------------------------->
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://voice.google.com/u/0/calls" onclick="basicPopup(this.href);return false">Google Voice</a>
+<div class="menu-section-label">Calls &amp; Contacts</div>
+<a class="list-group-item list-group-item-action" href="https://voice.google.com/u/0/calls" onclick="basicPopup(this.href);return false">Google Voice</a>
 	
 
 	<!-----------------------------------------Neurology Jamison-------------------------------------------Neurology Jamison ----------------------------------------------------------------------------------------------->
-	
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://www.providence.org/doctors/neurology/or/oregon-city/kevin-jamison-1003811373?ls=provider&y_source=1_NDQxMzM4MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" onclick="basicPopup(this.href);return false">Providence Neurological Specialties</a>
+<a class="list-group-item list-group-item-action" href="https://www.providence.org/doctors/neurology/or/oregon-city/kevin-jamison-1003811373?ls=provider&y_source=1_NDQxMzM4MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" onclick="basicPopup(this.href);return false">Providence Neurological Specialties</a>
 
 <!----------------------------Clackamas Health Centers-------------------------------------------------------------------------------------------------------------------------------------------->
-	<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://mychart.ochin.org/mychart/Authentication/Login?postloginurl=Home%2f" onclick="basicPopup(this.href);return false">Clackamas Health Centers (MyChart)</a>
+<a class="list-group-item list-group-item-action" href="https://mychart.ochin.org/mychart/Authentication/Login?postloginurl=Home%2f" onclick="basicPopup(this.href);return false">Clackamas Health Centers (MyChart)</a>
 
 <!---------------------------- Providence Infectious Disease Consultants-East -------------------------------------------------------------------------------------------------------------------------------------------->
-
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://www.providence.org/locations/or/infectious-disease-consultants-east" onclick="basicPopup(this.href);return false">Providence Infectious Disease</a>
+<a class="list-group-item list-group-item-action" href="https://www.providence.org/locations/or/infectious-disease-consultants-east" onclick="basicPopup(this.href);return false">Providence Infectious Disease</a>
 
 
 			
 <!-- medical card  =========================================================================-->
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="medicalcard.html" onclick="basicPopup(this.href);return false">Current Medical Card</a>
-
-
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://www.clackamas.us/healthcenters/beavercreek" onclick="basicPopup(this.href);return false">Clackamas Health Centers</a>
-	
-	<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://www.providence.org/locations/or/milwaukie-healing-place/milwaukie-healing-place-rehab-and-sports-therapy?ls=location&y_source=1_OTU3NjIzMi03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" onclick="basicPopup(this.href);return false">Providence Milwaukie Healing Place</a>
-
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://eosdocs.com/" onclick="basicPopup(this.href);return false">Eastside Orthopedics Sports Medicine</a>
-	
-	<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://www.oregon.gov/odhs/Pages/default.aspx/" onclick="basicPopup(this.href);return false">ODHSCase Manager-Margie Conway</a>
-
-<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-	<a class="list-group-item list-group-item-action" href="https://familyresourcehomecare.com/" onclick="basicPopup(this.href);return false">Family Resource Home Care</a>
-
-	
-	<script>// JavaScript popup window function
-	function basicPopup(url) {
-popupWindow = window.open(url,'popUpWindow','height=300,width=700,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=no,directories=no, status=yes')
-	}
-
-</script>
-					<a class="list-group-item list-group-item-action" href="secure_page/index.html" onclick="basicPopup(this.href);return false">Edit (Password Protect)</a>
+<div class="menu-section-label">Records &amp; Support</div>
+<a class="list-group-item list-group-item-action" href="medicalcard.html" onclick="basicPopup(this.href);return false">Current Medical Card</a>
+<a class="list-group-item list-group-item-action" href="https://www.clackamas.us/healthcenters/beavercreek" onclick="basicPopup(this.href);return false">Clackamas Health Centers</a>
+<a class="list-group-item list-group-item-action" href="https://www.providence.org/locations/or/milwaukie-healing-place/milwaukie-healing-place-rehab-and-sports-therapy?ls=location&y_source=1_OTU3NjIzMi03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" onclick="basicPopup(this.href);return false">Providence Milwaukie Healing Place</a>
+<a class="list-group-item list-group-item-action" href="https://eosdocs.com/" onclick="basicPopup(this.href);return false">Eastside Orthopedics Sports Medicine</a>
+<a class="list-group-item list-group-item-action" href="https://www.oregon.gov/odhs/Pages/default.aspx/" onclick="basicPopup(this.href);return false">ODHSCase Manager-Margie Conway</a>
+<a class="list-group-item list-group-item-action" href="https://familyresourcehomecare.com/" onclick="basicPopup(this.href);return false">Family Resource Home Care</a>
+<div class="menu-section-label">Administration</div>
+<a class="list-group-item list-group-item-action" href="secure_page/index.html" onclick="basicPopup(this.href);return false">Edit (Password Protect)</a>
 
 	
 	
@@ -473,36 +449,32 @@ function openPopup13() {
 	   <!--  -->
 	   <!-- Right Column -->
 	  <div class="col-sm-3">
-<div class="card">
+<div class="card portal-menu-card">
 				<div class="card-header p-b-0">
-					<h5 class="card-title"><i class="fa fa-cog" aria-hidden="true"></i> Contacts <a href="mariemedicalcontacts.html" target="_blank"></a>
-					</h5>
-					
-					
-					
-					
+					<h5 class="card-title"><i class="fa fa-phone" aria-hidden="true"></i> Contacts</h5>
 				</div>
 
-				<div class="card-block">
-					<p class="card-text">PROVIDENCE HEART CLINIC Alejandro Perez, MD 503-962-1000</p>
-					<p class="card-text">Fred Meyer RX 503-657-1483 Oregon City</p>
-					<p class="card-text">Eye Health NW 503-656-4221 Oregon City</p>
-					<p class="card-text">Oregon Spine Care 503-828-1150</p>
-					<p class="card-text">Oregon Clinic 503-692-5650</p>
-					<p class="card-text">Neurological Specialties Kevin J. Jamison 503-742-6900</p>
-					<p class="card-text">Willamette Falls Hospital Oregon City 503-656-1631</p>
-					<p class="card-text">I.D. Dr Imran A. Mohamedy, MD FACP	503-216-7000</p>
-					<p class="card-text">Clackamas Health Centers Jennifer Moon 503-655-8471</p>
-					<p class="card-text">Bolouri Dental Group 503-654-0613</p>
-			        <p class="card-text">Providence Milwaukie Healing Place(Hearing Aid) 503-513-8600</p>
-                    <p class="card-text">Eastside Orthopedics Sports Medicine 503 659 1769</p>
-                    <p class="card-text">Providence Immediate Care - Canby 	503-483-9226</p>
-                    <p class="card-text">Family Resource Home Care 	Jennifer Barclay OC 971-606-2018</p>
-                    <p class="card-text">Oregon Department of Human Services Case Manager-Amelia Pacheco Santosy	Phone: 971-380-0701</p>
-					
-					
-					
-					
+				<div class="list-group list-group-flush">
+                    <div class="menu-section-label">Doctors &amp; Clinics</div>
+                    <a class="list-group-item list-group-item-action" href="tel:5039621000">Providence Heart Clinic<br><small>Alejandro Perez, MD · 503-962-1000</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036564221">Eye Health NW<br><small>Oregon City · 503-656-4221</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5038281150">Oregon Spine Care<br><small>503-828-1150</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036925650">Oregon Clinic<br><small>503-692-5650</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5037426900">Neurological Specialties<br><small>Kevin J. Jamison · 503-742-6900</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5032167000">Providence Infectious Disease<br><small>Imran A. Mohamedy, MD, FACP · 503-216-7000</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036558471">Clackamas Health Centers<br><small>Jennifer Moon · 503-655-8471</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036540613">Bolouri Dental Group<br><small>503-654-0613</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5035138600">Providence Milwaukie Healing Place<br><small>Hearing Aid · 503-513-8600</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036591769">Eastside Orthopedics Sports Medicine<br><small>503-659-1769</small></a>
+
+                    <div class="menu-section-label">Pharmacy &amp; Hospital</div>
+                    <a class="list-group-item list-group-item-action" href="tel:5036571483">Fred Meyer RX<br><small>Oregon City · 503-657-1483</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5036561631">Willamette Falls Hospital<br><small>Oregon City · 503-656-1631</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:5034839226">Providence Immediate Care – Canby<br><small>503-483-9226</small></a>
+
+                    <div class="menu-section-label">Care &amp; Support</div>
+                    <a class="list-group-item list-group-item-action" href="tel:9716062018">Family Resource Home Care<br><small>Jennifer Barclay OC · 971-606-2018</small></a>
+                    <a class="list-group-item list-group-item-action" href="tel:9713800701">Oregon Department of Human Services<br><small>Case Manager Amelia Pacheco Santosy · 971-380-0701</small></a>
 				</div>
 				<!-- Text Panel Contacts -->
 			
